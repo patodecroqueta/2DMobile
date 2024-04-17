@@ -136,9 +136,11 @@ GameObject:
   - component: {fileID: 71119798}
   - component: {fileID: 71119797}
   - component: {fileID: 71119796}
+  - component: {fileID: 71119801}
   - component: {fileID: 71119795}
+  - component: {fileID: 71119802}
   m_Layer: 0
-  m_Name: "mu\xF1eca"
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,8 +204,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07313046, y: -0.4204997}
-  m_Size: {x: 2.8048687, y: 4.6390004}
+  m_Offset: {x: -0.07313015, y: -0.4204997}
+  m_Size: {x: 2.6327782, y: 4.6390004}
   m_Direction: 0
 --- !u!50 &71119798
 Rigidbody2D:
@@ -299,6 +301,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71119801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71119794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb52c38b4bd287e4a8a006a7f2c70144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &71119802
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71119794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45434cc4fda4d8b4d997e3ba4adfa668, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
