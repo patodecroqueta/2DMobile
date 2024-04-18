@@ -25,6 +25,6 @@ public class EnemigoDisparador : MonoBehaviour
     void Disparar(){
         if (!isADistancia) return;
         GameObject proyectil = Instantiate(prefabProyectil, puntoDisparo.position, puntoDisparo.rotation);
-        proyectil.GetComponent<Rigidbody>().AddForce(puntoDisparo.forward * fuerzaDisparo);
+        proyectil.GetComponent<Rigidbody2D>().AddForce(puntoDisparo.forward * fuerzaDisparo);
     }
 }
