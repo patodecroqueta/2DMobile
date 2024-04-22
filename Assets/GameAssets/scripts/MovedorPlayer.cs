@@ -9,7 +9,7 @@ public class MovedorPlayer : MonoBehaviour
     public float velocidadDesplazamiento;
     public float velocidadSalto;
     public AudioClip sonidoSalto;
-    [Header("Marcar si se desea utilizar el pad an�logico de XBOX en lugar del digital")]
+    [Header("Marcar si se desea utilizar el pad analógico de XBOX en lugar del digital")]
     public bool padAnalogicoXBOX = false;
 
     private float horizontal;
@@ -22,21 +22,19 @@ public class MovedorPlayer : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        if (joystick){
+        if (Application.platform == RuntimePlatform.Android){
             horizontal = joystick.Horizontal;
+        } else {
+            horizontal = Input.GetAxis("Horizontal");
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
+            {
+                Saltar();
+            }
         }
+        playerRB2D.velocity =
+                new Vector2(horizontal * velocidadDesplazamiento, playerRB2D.velocity.y);
         if (padAnalogicoXBOX){
             horizontal = Input.GetAxis("HorizontalXBox");
-        }
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
-        {
-            Saltar();
-        }
-        else
-        {
-            playerRB2D.velocity =
-                new Vector2(horizontal * velocidadDesplazamiento, playerRB2D.velocity.y);
         }
     }
 

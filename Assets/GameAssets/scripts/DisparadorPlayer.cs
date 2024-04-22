@@ -25,9 +25,11 @@ public class DisparadorPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("Fire2"))
-        {
-           Disparar();
+        if (Application.platform != RuntimePlatform.Android) {
+            if (Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("Fire2"))
+            {
+            Disparar();
+            }
         }
     }
     public void Disparar(){

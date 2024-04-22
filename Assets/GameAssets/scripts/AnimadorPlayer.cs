@@ -18,9 +18,12 @@ public class AnimadorPlayer : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        if (joystick){
+        if (Application.platform == RuntimePlatform.Android){
             horizontal = joystick.Horizontal;
+        } 
+        else 
+        {
+            horizontal = Input.GetAxis("Horizontal");
         }
         if (padAnalogicoXBOX)
         {
